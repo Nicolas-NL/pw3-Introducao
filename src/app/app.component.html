@@ -1,5 +1,14 @@
 <h1 style="color: Brown;">
   Olá, {{NomeCompleto()}}!
   Você tem {{Idade}} anos.
-  <a href="chrome://dino">chrome://dino</a>
+   <img src = {{logo}}>
+  <button (click)="obterAlerta()">Exibir</button>
+
+  <p [hidden]="ocultar">
+    Hoje é terça-feira
+  </p>
+
+  <button (click)="exibirOcultar()"> Mostrar Texto</button>
+
+   <!--<img src = "assets/arara.jpg">!-->
 </h1>
