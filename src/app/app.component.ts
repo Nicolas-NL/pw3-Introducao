@@ -6,23 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pw3-introducao';
-   logo = "favicon.ico";
-   Nome = "Nicolas";
-   Sobrenome="Lima";
-   Idade = 17;
-   ocultar = true;
 
-   NomeCompleto(){
-    this.Nome+this.Sobrenome
-    return this.Nome+' '+this.Sobrenome
+   BiscoitoInt = "assets/biscoito.png";
+   BiscoitoQue = "assets/biscoito-aberto.png";
+   ocultar = true;
+   botao = false;
+
+   frases =['Calvo pra Vida Toda','Muito Calvo para ser calculada sua sorte','Calvo as 2 anos '];
+   QuebrarBiscoito(){
+    this.exibirOcultar();
+    this.botao= true;
+    this.BiscoitoInt = this.BiscoitoQue;
+
    }
-    obterAlerta(){
-      alert("Hoje é Terça-feira");
-    }
     exibirOcultar(){
          this.ocultar = !this.ocultar;
 
+
        }
+    sorteio(){
+      return this.frases[Math.floor(Math.random()*this.frases.length)];
+    }
 
 }
