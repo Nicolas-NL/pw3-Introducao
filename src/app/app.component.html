@@ -1,13 +1,21 @@
-<h1 style="font-size: 75px; color: Brown; text-align: center;">
-  TESTE SUA SORTE
-</h1>
-<h2 style ="font-size: 100px;">
+<button>
+  Individual
+  </button>
 
-  <img [src] ="BiscoitoInt" >
+  <button>
+    Casal
+    </button>
 
-  <p [hidden]="ocultar">
-   {{sorteio()}}
-  </p>
+  <button>
+    Familia
+    </button>
 
-  <button style = "color: brown; size: 50px;"[disabled] ="botao"(click)="QuebrarBiscoito()"> Quebrar o Biscoito</button>
-</h2>
+  <button>
+    Amigos
+    </button>
+
+<h1 style="font-size: 75px; color: Brown; text-align: center;">  TESTE SUA SORTE</h1>
+
+<app-biscoito></app-biscoito>
+
+
