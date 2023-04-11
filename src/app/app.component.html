@@ -1,21 +1,31 @@
-<button>
-  Individual
+
+  <button style = "color: brown; size: 50px;"[disabled] ="botao"(click)="individual()">
+    Individual
   </button>
 
-  <button>
+
+  <button style = "color: brown; size: 50px;"[disabled] ="botao"(click)="Casal()">
     Casal
     </button>
 
-  <button>
+  <button style = "color: brown; size: 50px;"[disabled] ="botao"(click)="Familia()">
     Familia
     </button>
 
-  <button>
+  <button style = "color: brown; size: 50px;"[disabled] ="botao"(click)="Amigos()">
     Amigos
     </button>
 
 <h1 style="font-size: 75px; color: Brown; text-align: center;">  TESTE SUA SORTE</h1>
 
-<app-biscoito></app-biscoito>
+<div [ngSwitch]="tamanho">
+  <p *ngSwitchCase="1"> Preço Individual: R$5,00<br><app-biscoito  ></app-biscoito></p>
+  <p *ngSwitchCase="2"> Preço Casal: R$8,00<br><app-biscoito ></app-biscoito> <br><app-biscoito ></app-biscoito></p>
+  <p *ngSwitchCase="3"> Preço Familia: R$10,00<br><app-biscoito ></app-biscoito> <br> <app-biscoito ></app-biscoito> <br> <app-biscoito ></app-biscoito></p>
+  <p *ngSwitchCase="4"> Preço Amigos: R$12,00<br><app-biscoito ></app-biscoito> <br> <app-biscoito ></app-biscoito> <br> <app-biscoito ></app-biscoito> <br> <app-biscoito ></app-biscoito></p>
+  <p *ngSwitchDefault></p>
+
+</div>
+
 
 
